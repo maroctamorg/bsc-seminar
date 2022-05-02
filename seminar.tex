@@ -77,58 +77,58 @@
 \end{frame}
 
 \section{Background}
-% \subsection{Historical Developments}
+ \subsection{Historical Developments}
 
-% \begin{frame}
-% \frametitle{Historical Background (early 1800s)}
-% \begin{columns}[T]
-%     \pause
-%     \column{0.5\textwidth}
-%     \textbf{Hamilton}\\
-%     Extends the complex numbers into quaternions, aiming at a formal vector algebra for $\mathbb{R}^3$, effectively representing (rotations in) 3D space:
-%     \begin{align*}
-%         &q = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k}\\
-%         &i^2 = j^2 = k^2 = ijk = -1\\
-%         &ij = k, ki = j, jk = i
-%     \end{align*}
-%     Product of two 'vectors':
-%     \[-\sum v_iu_i + \sum_{i\to j\to k}(v_iu_j - v_ju_i)\boldsymbol{k}\]
-    
-%     \pause
-    
-%     \column{0.5\textwidth}
-%     \textbf{Grassmann}\\
-%     First formulation of 'modern' linear algebra (vector spaces, bases, inner product and orthogonality) as well as the outer product:
-%     \begin{align*}
-%         &\bv{e_i} | \bv{e_j} = \delta_{ij}\\
-%         &\bv{e_i}\wedge \bv{e_j} = -\bv{e_i}\wedge \bv{e_j}\\
-%         &\boldsymbol{v} = \sum v_i\boldsymbol{e_i}, \boldsymbol{u} = \sum u_j\boldsymbol{e_j}
-%     \end{align*}
-%     The outer products of linearly independent vectors represents their linear span.
-% \end{columns}
-% \end{frame}
+\begin{frame}
+\frametitle{Historical Background (early 1800s)}
+\begin{columns}[T]
+    \pause
+    \column{0.5\textwidth}
+    \textbf{Hamilton}\\
+    Extends the complex numbers into quaternions, aiming at a formal vector algebra for $\mathbb{R}^3$, effectively representing (rotations in) 3D space:
+    \begin{align*}
+        &q = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k}\\
+        &i^2 = j^2 = k^2 = ijk = -1\\
+        &ij = k, ki = j, jk = i
+    \end{align*}
+    Product of two 'vectors':
+    \[-\sum v_iu_i + \sum_{i\to j\to k}(v_iu_j - v_ju_i)\boldsymbol{k}\]
+  
+    \pause
+  
+    \column{0.5\textwidth}
+    \textbf{Grassmann}\\
+    First formulation of 'modern' linear algebra (vector spaces, bases, inner product and orthogonality) as well as the outer product:
+    \begin{align*}
+        &\bv{e_i} | \bv{e_j} = \delta_{ij}\\
+        &\bv{e_i}\wedge \bv{e_j} = -\bv{e_i}\wedge \bv{e_j}\\
+        &\boldsymbol{v} = \sum v_i\boldsymbol{e_i}, \boldsymbol{u} = \sum u_j\boldsymbol{e_j}
+    \end{align*}
+    The outer products of linearly independent vectors represents their linear span.
+\end{columns}
+\end{frame}
 
-% \begin{frame}
-% \frametitle{Historical Background (late 1800s)}
-% \begin{columns}[T]
-%     \column{0.5\textwidth}
-%     \textbf{Gibbs-Heaviside}\\
-%     Separates the product of quaternion 'vectors' into dot and cross products; formally replaces the imaginary units with the unit vectors.\\
-%     \vspace{0.5em}
-%     Development of standard vector calculus (e.g. $\nabla, \nabla \cdot, \nabla \times$), applied extensively in Electrodynamics, leading to the widespread adoption of the formalism.
-    
-%     \pause
-    
-%     \column{0.5\textwidth}
-%     \textbf{Clifford}\\
-%     Extends Grassmann's work into his Geometric Algebra, incorporating Hamilton's quaternions into an abstractable and generalizable algebraic system for vectors, based on the geometric product:
-%     \begin{align*}
-%         &uv = u | v + u \wedge v\\
-%         &V = \sum \langle V\rangle_i\\
-%         &\g{V}{r} = \sum v_i\bv{e_{i_1}}\wedge ... \wedge \bv{e_{i_r}}
-%     \end{align*}
-% \end{columns}
-% \end{frame}
+\begin{frame}
+\frametitle{Historical Background (late 1800s)}
+\begin{columns}[T]
+    \column{0.5\textwidth}
+    \textbf{Gibbs-Heaviside}\\
+    Separates the product of quaternion 'vectors' into dot and cross products; formally replaces the imaginary units with the unit vectors.\\
+    \vspace{0.5em}
+    Development of standard vector calculus (e.g. $\nabla, \nabla \cdot, \nabla \times$), applied extensively in Electrodynamics, leading to the widespread adoption of the formalism.
+  
+    \pause
+  
+    \column{0.5\textwidth}
+    \textbf{Clifford}\\
+    Extends Grassmann's work into his Geometric Algebra, incorporating Hamilton's quaternions into an abstractable and generalizable algebraic system for vectors, based on the geometric product:
+    \begin{align*}
+        &uv = u | v + u \wedge v\\
+        &V = \sum \langle V\rangle_i\\
+        &\g{V}{r} = \sum v_i\bv{e_{i_1}}\wedge ... \wedge \bv{e_{i_r}}
+    \end{align*}
+\end{columns}
+\end{frame}
 
 \setlength{\belowdisplayskip}{0pt}
 \setlength{\abovedisplayskip}{0pt}
@@ -206,98 +206,98 @@ A \textit{Real (Finite) Geometric Algebra} is a set $\G(\V)$ satisfying:
 % \setbeamercovered{invisible}
 \end{frame}
 
-% \subsection{Elements}
-% \begin{frame}
-% \frametitle{Elements of $\G(\V)$}
-% \onslide<1->{
-%     \begin{block}{Identities}
-%         As a unitary algebra, $\G(\V)$ has unique additive and multiplicative identities: $0, 1 \in \R \subset \G(\V)$
-%     \end{block}
-% }
-% \onslide<2->{
-%     \begin{block}{Scalars}
-%         We refer to reals $a \in \R \subset \G(\V)$ as scalars, or $\textit{grade-0}$ vectors.
-%     \end{block}
-% }
-% \onslide<3->{
-%     \begin{block}{1-vectors}
-%         Elements $v \in \V \subset \G(\V)$ are called 1-vectors, or simply vectors.
-%     \end{block}
-% }
-% \end{frame}
+\subsection{Elements}
+\begin{frame}
+\frametitle{Elements of $\G(\V)$}
+\onslide<1->{
+    \begin{block}{Identities}
+        As a unitary algebra, $\G(\V)$ has unique additive and multiplicative identities: $0, 1 \in \R \subset \G(\V)$
+    \end{block}
+}
+\onslide<2->{
+    \begin{block}{Scalars}
+        We refer to reals $a \in \R \subset \G(\V)$ as scalars, or $\textit{grade-0}$ vectors.
+    \end{block}
+}
+\onslide<3->{
+    \begin{block}{1-vectors}
+        Elements $v \in \V \subset \G(\V)$ are called 1-vectors, or simply vectors.
+    \end{block}
+}
+\end{frame}
 
-% \begin{frame}
-% \frametitle{Elements of $\G(\V)$}
-% \onslide<1->{
-%     \begin{block}{k-blades}
-%         Products $\bv{e_1}\bv{e_2}...\bv{e_k}$ of k anticommuting vectors; we say that a k-blade has grade k.
-%     \end{block}
-% }
-% \onslide<2->{
-%     \begin{block}{k-versors}
-%         Arbitrary products $\bv{v_1}\bv{v_2}...\bv{v_k}$ of k vectors.
-%     \end{block}
-% }
-% \onslide<3->{
-%     \begin{block}{Multivectors}
-%         Finite sums of versors. By axiom (2), every element $V \in \G(\V)$ is a multivector. We say $A$ is a \textbf{homogeneous} (or simple) multivector iff it is a sum of k-blades for a given $k \in \N$; otherwise we say $A$ is of mixed grade.
-%     \end{block}
-% }
-% \end{frame}
+\begin{frame}
+\frametitle{Elements of $\G(\V)$}
+\onslide<1->{
+    \begin{block}{k-blades}
+        Products $\bv{e_1}\bv{e_2}...\bv{e_k}$ of k anticommuting vectors; we say that a k-blade has grade k.
+    \end{block}
+}
+\onslide<2->{
+    \begin{block}{k-versors}
+        Arbitrary products $\bv{v_1}\bv{v_2}...\bv{v_k}$ of k vectors.
+    \end{block}
+}
+\onslide<3->{
+    \begin{block}{Multivectors}
+        Finite sums of versors. By axiom (2), every element $V \in \G(\V)$ is a multivector. We say $A$ is a \textbf{homogeneous} (or simple) multivector iff it is a sum of k-blades for a given $k \in \N$; otherwise we say $A$ is of mixed grade.
+    \end{block}
+}
+\end{frame}
 
-% \subsection{Products}
-% \begin{frame}
-% \frametitle{Vector Products: Inner, Outer and Geometric}
-% \onslide<1->{
-%     \begin{definition}[Inner Product]
-%         The symmetrized product $u | v \equiv \frac{1}{2}(uv + vu)$ between two vectors is a (pseudo) inner product on $\V$.
-%     \end{definition}
-% }
-% % \only<2>{
-% %     \begin{proof}
-% %     Axioms (1) and (4) imply it is bilinear, nondegenerate and by definition symmetric; we show it maps into $\R$:
-% %         \begin{align*}
-% %             &(v+u)^2 = v^2 + u^2 + vu + uv \Leftrightarrow \\
-% %             &vu + uv = (v+u)^2 - v^2 - u^2 \in \R \mathrm{\ (A3)}
-% %         \end{align*}
-% %     \end{proof}
-% % }
-% \onslide<2->{
-%     \begin{definition}[Outer Product]
-%         We define the outer product of two vectors as the anti-symmetrized product $u \wedge v \equiv \frac{1}{2}(uv - vu)$.
-%     \end{definition}
-% }
-% \onslide<4->{
-%     \begin{block}{Remark (Geometric Product)}
-%         The geometric product between vectors can thus be written:
-%         \[uv = u | v + u \wedge v\]
-%     \end{block}
-% }
-% \end{frame}
+\subsection{Products}
+\begin{frame}
+\frametitle{Vector Products: Inner, Outer and Geometric}
+\onslide<1->{
+    \begin{definition}[Inner Product]
+        The symmetrized product $u | v \equiv \frac{1}{2}(uv + vu)$ between two vectors is a (pseudo) inner product on $\V$.
+    \end{definition}
+}
+\only<2>{
+    \begin{proof}
+    Axioms (1) and (4) imply it is bilinear, nondegenerate and by definition symmetric; we show it maps into $\R$:
+        \begin{align*}
+            &(v+u)^2 = v^2 + u^2 + vu + uv \Leftrightarrow \\
+            &vu + uv = (v+u)^2 - v^2 - u^2 \in \R \mathrm{\ (A3)}
+        \end{align*}
+    \end{proof}
+}
+\onslide<3->{
+    \begin{definition}[Outer Product]
+        We define the outer product of two vectors as the anti-symmetrized product $u \wedge v \equiv \frac{1}{2}(uv - vu)$.
+    \end{definition}
+}
+\onslide<4->{
+    \begin{block}{Remark (Geometric Product)}
+        The geometric product between vectors can thus be written:
+        \[uv = u | v + u \wedge v\]
+    \end{block}
+}
+\end{frame}
 
-% \begin{frame}
-% \frametitle{Homogeneous Products}
-% \setlength{\belowdisplayskip}{0.5\baselineskip}
-% \setlength{\abovedisplayskip}{0.5\baselineskip}
-% \onslide<1->{
-%     Between homogeneous multivectors, the product can be shown to decompose as:
-%     \[A_rB_s = \g{A_rB_s}{|r-s|} + \g{A_rB_s}{|r-s|+2} + ... \g{A_rB_s}{r+s-2} + \g{A_rB_s}{r+s}\]
-% }
-% \onslide<2->{
-%     \begin{block}{Definitions}
-%         Generalized Inner Product:
-%         \[A_r | B_s \equiv \g{A_rB_s}{|s-r|}\]
-%         %represents the orthogonal complement of the smaller space in the larger space (left\right)
-%         Generalized Outer Product:
-%         \[A_r \wedge B_s \equiv \g{A_rB_s}{r+s} = a_1\wedge ...\wedge a_r\wedge b_1\wedge ... \wedge b_s\]
-%         %represents the direct sum of the spaces
-%         Scalar Product:
-%         \[A_r * B_s \equiv \gs{A_rB_s}\]
-%     \end{block}
-% }
-% \setlength{\belowdisplayskip}{\baselineskip}
-% \setlength{\abovedisplayskip}{\baselineskip}
-% \end{frame}
+\begin{frame}
+\frametitle{Homogeneous Products}
+\setlength{\belowdisplayskip}{0.5\baselineskip}
+\setlength{\abovedisplayskip}{0.5\baselineskip}
+\onslide<1->{
+    Between homogeneous multivectors, the product can be shown to decompose as:
+    \[A_rB_s = \g{A_rB_s}{|r-s|} + \g{A_rB_s}{|r-s|+2} + ... \g{A_rB_s}{r+s-2} + \g{A_rB_s}{r+s}\]
+}
+\onslide<2->{
+    \begin{block}{Definitions}
+        Generalized Inner Product:
+        \[A_r | B_s \equiv \g{A_rB_s}{|s-r|}\]
+        %represents the orthogonal complement of the smaller space in the larger space (left\right)
+        Generalized Outer Product:
+        \[A_r \wedge B_s \equiv \g{A_rB_s}{r+s} = a_1\wedge ...\wedge a_r\wedge b_1\wedge ... \wedge b_s\]
+        %represents the direct sum of the spaces
+        Scalar Product:
+        \[A_r * B_s \equiv \gs{A_rB_s}\]
+    \end{block}
+}
+\setlength{\belowdisplayskip}{\baselineskip}
+\setlength{\abovedisplayskip}{\baselineskip}
+\end{frame}
 \section{Euclidean 3D space}
 \setlength{\belowdisplayskip}{0pt}
 \setlength{\abovedisplayskip}{0pt}
@@ -320,25 +320,25 @@ Elements $e_i\wedge e_j$ can be thought of as representing the rectangle spanned
 \setlength{\belowdisplayskip}{\baselineskip}
 \setlength{\abovedisplayskip}{\baselineskip}
 
-% \begin{frame}{Pseudoscalars, Duality and Invertibility}
-%     \begin{definition}[Pseudoscalar]
-% \setlength{\belowdisplayskip}{0.5\baselineskip}
-% \setlength{\abovedisplayskip}{0.5\baselineskip}
-%     The 3-blade is unique up to scalar multiplication; we call it 'pseudoscalar' and denote it $I$ as it has the following property: \[I^2=e_1e_2e_3e_1e_2e_3=-e_1e_2e_3e_3e_2e_1=-1\]
-%     The unit bivectors are pseudoscalars of their respective subspaces: $(e_ie_j)^2 = -e_ie_je_je_i = -1$
-% \setlength{\belowdisplayskip}{\baselineskip}
-% \setlength{\abovedisplayskip}{\baselineskip}    
-%     \end{definition}
-    
-%     \begin{definition}[Dual]
-%     The dual of a multivector: $V^* \equiv IV$
-%     \end{definition}
-    
-%     \begin{block}{Remark (Invertibility)}
-%         All vectors in $\G(\R^3)$ are invertible: $v^{-1} \equiv \frac{v}{v^2}$
-%     \end{block}
-    
-% \end{frame}
+\begin{frame}{Pseudoscalars, Duality and Invertibility}
+    \begin{definition}[Pseudoscalar]
+\setlength{\belowdisplayskip}{0.5\baselineskip}
+\setlength{\abovedisplayskip}{0.5\baselineskip}
+    The 3-blade is unique up to scalar multiplication; we call it 'pseudoscalar' and denote it $I$ as it has the following property: \[I^2=e_1e_2e_3e_1e_2e_3=-e_1e_2e_3e_3e_2e_1=-1\]
+    The unit bivectors are pseudoscalars of their respective subspaces: $(e_ie_j)^2 = -e_ie_je_je_i = -1$
+\setlength{\belowdisplayskip}{\baselineskip}
+\setlength{\abovedisplayskip}{\baselineskip}    
+    \end{definition}
+  
+    \begin{definition}[Dual]
+    The dual of a multivector: $V^* \equiv IV$
+    \end{definition}
+  
+    \begin{block}{Remark (Invertibility)}
+        All vectors in $\G(\R^3)$ are invertible: $v^{-1} \equiv \frac{v}{v^2}$
+    \end{block}
+  
+\end{frame}
 
 \begin{frame}
 \frametitle{Gibbs' Cross Product}
@@ -417,34 +417,34 @@ Elements $e_i\wedge e_j$ can be thought of as representing the rectangle spanned
     \end{columns}
 \end{frame}
 
-% \begin{frame}
-% \frametitle{Spinor subalgebra: $\G_2(\R^3) \simeq \C$}
-% \begin{theorem}
-%     For any choice of $(i,j) : i\neq j$, the set $\{1, e_ie_j\}$ generates a subalgebra $\G_2(\R^3)$ isomorphic to $\C$.
-% \end{theorem}
-% \begin{proof}
-%     Consider the multiplication table of the set:
-%     \begin{columns}
-%         \column{0.5\textwidth}
-%         \begin{center}
-%             \renewcommand\arraystretch{1.3}
-%             \setlength\doublerulesep{0pt}
-%             \begin{tabular}{|r|||r|r|}
-%             \hline
-%             $\cdot$ & 1 & $e_ie_j$ \\
-%             \hline\hline\hline
-%             1 & 1 & $e_ie_j$ \\ 
-%             \hline
-%             $e_ie_j$ & $e_ie_j$ & -1\\ 
-%             \hline
-%             \end{tabular}
-%         \end{center}
-    
-%     \column{0.5\textwidth}
-%         It is clear that the isomorphism is given by $e_ie_j \longleftrightarrow i$.
-%     \end{columns}
-% \end{proof}
-% \end{frame}
+\begin{frame}
+\frametitle{Spinor subalgebra: $\G_2(\R^3) \simeq \C$}
+\begin{theorem}
+    For any choice of $(i,j) : i\neq j$, the set $\{1, e_ie_j\}$ generates a subalgebra $\G_2(\R^3)$ isomorphic to $\C$.
+\end{theorem}
+\begin{proof}
+    Consider the multiplication table of the set:
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{center}
+            \renewcommand\arraystretch{1.3}
+            \setlength\doublerulesep{0pt}
+            \begin{tabular}{|r|||r|r|}
+            \hline
+            $\cdot$ & 1 & $e_ie_j$ \\
+            \hline\hline\hline
+            1 & 1 & $e_ie_j$ \\ 
+            \hline
+            $e_ie_j$ & $e_ie_j$ & -1\\ 
+            \hline
+            \end{tabular}
+        \end{center}
+  
+    \column{0.5\textwidth}
+        It is clear that the isomorphism is given by $e_ie_j \longleftrightarrow i$.
+    \end{columns}
+\end{proof}
+\end{frame}
 
 \begin{frame}
 \frametitle{Spinor subalgebra: $\G_+(\R^3) \simeq \HM$}
@@ -508,8 +508,8 @@ Elements $e_i\wedge e_j$ can be thought of as representing the rectangle spanned
 \section{Conclusion}
 \begin{frame}
 \frametitle{Conclusion}
-% \begin{columns}[T]
-% \column{0.5\textwidth}
+\begin{columns}[T]
+\column{0.5\textwidth}
     \textbf{Advantages}
     \begin{enumerate}
         \item Generalizes Gibbs' algebra for $\R^3$ to any dimension
@@ -522,16 +522,16 @@ Elements $e_i\wedge e_j$ can be thought of as representing the rectangle spanned
         \pause
         \item Simplifies algebraic manipulations of vectors
     \end{enumerate}
-% \column{0.5\textwidth}
-%     \textbf{Disadvantages}
-%     \begin{enumerate}
-%         \item Requires working with a large number of different objects
-%         \pause
-%         \item Depends on a quadratic form, so it is not applicable in more abstract topological settings
-%         \pause
-%         \item Requires embedding manifolds into a higher dimensional Euclidean space
-%     \end{enumerate}
-% \end{columns}
+\column{0.5\textwidth}
+    \textbf{Disadvantages}
+    \begin{enumerate}
+        \item Requires working with a large number of different objects
+        \pause
+        \item Depends on a quadratic form, so it is not applicable in more abstract topological settings
+        \pause
+        \item Requires embedding manifolds into a higher dimensional Euclidean space
+    \end{enumerate}
+\end{columns}
 \end{frame}
 
 \begin{frame}
