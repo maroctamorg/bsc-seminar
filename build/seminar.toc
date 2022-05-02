@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Background}{3}{0}{1}
+\beamer@sectionintoc {2}{Definitions and Properties}{6}{0}{2}
+\beamer@sectionintoc {3}{Euclidean 3D space}{10}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{19}{0}{4}
